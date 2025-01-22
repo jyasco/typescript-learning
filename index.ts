@@ -30,3 +30,8 @@ const coffee = {
 }
 coffee.size = 100
 console.log(CoffeeSize.SHORT);
+
+let unionType: number | string = 10;
+unionType = 'hello';
+
+let unionTypes: (number | string)[] = [21, 'hello']
