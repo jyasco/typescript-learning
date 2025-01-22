@@ -16,5 +16,17 @@ const person = {
 const fruits = ['Apple', 'Banana', 'Grape', 1]
 
 const book: [string, number, boolean] = ['business', 1500, false];
-book.push(21);
-console.log(book[3]);
+
+enum CoffeeSize {
+  SHORT = 100,
+  TALL = 'TALL',
+  GRANDE = 'GRANDE',
+  VENTI = 'VENTI'
+}
+
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+coffee.size = 100
+console.log(CoffeeSize.SHORT);
