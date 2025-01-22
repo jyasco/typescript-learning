@@ -15,4 +15,6 @@ const person = {
 
 const fruits = ['Apple', 'Banana', 'Grape', 1]
 
-console.log(person.name);
+const book: [string, number, boolean] = ['business', 1500, false];
+book.push(21);
+console.log(book[3]);
