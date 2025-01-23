@@ -24,7 +24,7 @@ var coffee = {
     size: CoffeeSize.TALL
 };
 coffee.size = 100;
-console.log(CoffeeSize.SHORT);
+//console.log(CoffeeSize.SHORT);
 var unionType = 10;
 unionType = 'hello';
 var unionTypes = [21, 'hello'];
@@ -37,8 +37,33 @@ var cloth = {
 function add(num1, num2) {
     return num1 + num2;
 }
-add('hello', 3);
+add(1, 3);
 function sayHello() {
-    console.log('Hello');
+    //console.log('Hello');
 }
-console.log(sayHello());
+//console.log(sayHello());
+var anotherAdd = function (num1, num2) {
+    return num1 + num2;
+};
+var doubleNumber = function (num) { return num * 2; };
+function doubleAndHandle(num, cd) {
+    var doubleNum = cd(num * 2);
+    //console.log(doubleNum);
+}
+doubleAndHandle(21, function (doubleNum) {
+    return doubleNum;
+});
+var unknownInput;
+var anyInput;
+var text;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+if (typeof unknownInput === 'string') {
+    text = unknownInput;
+}
+function error(message) {
+    throw new Error(message);
+}
+console.log(error('This is an error'));
