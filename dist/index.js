@@ -68,4 +68,3 @@ function error(message) {
     throw new Error(message);
 }
 console.log(error('This is an error'));
-//# sourceMappingURL=index.js.map
