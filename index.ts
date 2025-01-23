@@ -35,3 +35,15 @@ let unionType: number | string = 10;
 unionType = 'hello';
 
 let unionTypes: (number | string)[] = [21, 'hello']
+
+const apple = 'apple';
+
+
+let clothSize: 'small' | 'medium' | 'large' = 'large';
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large';
+} = {
+  color: 'white',
+  size: 'medium'
+}
