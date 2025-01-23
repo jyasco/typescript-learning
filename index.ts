@@ -39,10 +39,13 @@ let unionTypes: (number | string)[] = [21, 'hello']
 const apple = 'apple';
 
 
-let clothSize: 'small' | 'medium' | 'large' = 'large';
+type ClothSize = 'small' | 'medium' | 'large';
+
+
+let clothSize: ClothSize = 'large';
 const cloth: {
   color: string;
-  size: 'small' | 'medium' | 'large';
+  size: ClothSize;
 } = {
   color: 'white',
   size: 'medium'
