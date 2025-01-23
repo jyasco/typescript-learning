@@ -50,3 +50,10 @@ const cloth: {
   color: 'white',
   size: 'medium'
 }
+
+
+function add(num1, num2){
+  return num1 + num2;
+}
+
+add('hello', 3);
