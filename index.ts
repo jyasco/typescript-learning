@@ -57,3 +57,10 @@ function add(num1, num2){
 }
 
 add('hello', 3);
+
+
+function sayHello(): undefined {
+  console.log('Hello');
+}
+
+console.log(sayHello());
