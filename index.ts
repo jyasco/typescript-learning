@@ -52,7 +52,7 @@ const cloth: {
 }
 
 
-function add(num1, num2){
+function add(num1: number, num2: number): number{
   return num1 + num2;
 }
 
@@ -64,3 +64,9 @@ function sayHello(): undefined {
 }
 
 console.log(sayHello());
+
+const anotherAdd: (n1: number, n2: number) => number = function(num1, num2){
+  return num1 + num2;
+};
+
+const doubleNumber: (num: number) => number = num => num * 2;
