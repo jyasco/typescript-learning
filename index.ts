@@ -56,7 +56,7 @@ function add(num1: number, num2: number): number{
   return num1 + num2;
 }
 
-add('hello', 3);
+add(1, 3);
 
 
 function sayHello(): undefined {
@@ -79,3 +79,15 @@ function doubleAndHandle(num: number, cd: (num: number) => number): void{
 doubleAndHandle(21, doubleNum => {
   return doubleNum
 });
+
+let unknownInput: unknown;
+let anyInput: any;
+let text: string;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+
+if(typeof unknownInput === 'string'){
+  text = unknownInput;
+}
