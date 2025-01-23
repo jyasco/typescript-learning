@@ -70,3 +70,12 @@ const anotherAdd: (n1: number, n2: number) => number = function(num1, num2){
 };
 
 const doubleNumber: (num: number) => number = num => num * 2;
+
+function doubleAndHandle(num: number, cd: (num: number) => number): void{
+  const doubleNum = cd(num * 2)
+  console.log(doubleNum);
+}
+
+doubleAndHandle(21, doubleNum => {
+  return doubleNum
+});
