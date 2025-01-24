@@ -5,7 +5,7 @@ class Person {
     this.name = initName;
   }
 
-  greeting(this: { name: string }){
+  greeting(this: Person){
     console.log(`Hello! My name is ${this.name}`);
   }
 }
