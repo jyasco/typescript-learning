@@ -1,5 +1,12 @@
 "use strict";
 class Person {
+    static isAdult(age) {
+        if (age > 17) {
+            return true;
+        }
+        else
+            return false;
+    }
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -11,8 +18,27 @@ class Person {
         console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`);
     }
 }
+Person.species = 'Homo sapiens';
 class Teacher extends Person {
+    get subject() {
+        if (!this._subject) {
+            throw new Error('There is no subject.');
+        }
+        return this._subject;
+    }
+    set subject(value) {
+        if (!value) {
+            throw new Error('There is no subject.');
+        }
+        this._subject = value;
+    }
+    constructor(name, age, _subject) {
+        super(name, age);
+        this._subject = _subject;
+    }
+    greeting() {
+        console.log(`Hello! My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
+    }
 }
-const teacher = new Teacher('Bob', 40);
-teacher.incrementAge();
-teacher.greeting();
+console.log(Person.species);
+console.log(Person.isAdult(38));
