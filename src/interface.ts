@@ -1,5 +1,5 @@
 interface Human {
-  name: string;
+  readonly name: string;
   age: number;
   greeting(message: string): void;
 }
@@ -19,4 +19,6 @@ const tmpDeveloper = {
     console.log(message);
   }
 }
-const user: Human = tmpDeveloper;
+
+let user: Human = tmpDeveloper;
+user = tmpDeveloper;
