@@ -1,4 +1,8 @@
-interface Human {
+interface Nameble {
+  name: string;
+}
+
+interface Human extends Nameble {
   readonly name: string;
   age: number;
   greeting(message: string): void;
