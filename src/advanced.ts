@@ -66,3 +66,6 @@ function havePet(pet: Pet){
     pet.fly();
   }
 }
+
+const input = document.getElementById('input') as HTMLInputElement;
+input.value = 'initial input value'
