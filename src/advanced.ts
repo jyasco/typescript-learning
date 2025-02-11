@@ -20,12 +20,16 @@ type NumberBoolean = number | boolean;
 type StringNumber = string | number;
 type Mix = NumberBoolean & StringNumber
 
+function toUpperCase(x: string): string;
+function toUpperCase(x: number): number;
 function toUpperCase(x: string | number) {
   if (typeof x === 'string') {
     return x.toUpperCase();
   }
-  return '';
+  return x;
 }
+
+const upperHello = toUpperCase('hello');
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker){
@@ -68,3 +72,32 @@ function havePet(pet: Pet){
 }
 
 const input = document.getElementById('input')!;
+
+interface Designer {
+  name: string;
+  [index: string]: string;
+}
+
+const designer: Designer = {
+  name: 'Quill',
+  role: 'afa',
+  fafa: 'ohoho'
+}
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  }
+}
+
+const downloadedData: DownloadedData = {
+  id: 1
+}
+
+console.log(downloadedData.user?.name)
+const userData = downloadedData.user ?? 'no-user'
+type id = DownloadedData["user"]["name"]
