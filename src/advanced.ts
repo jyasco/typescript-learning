@@ -68,3 +68,14 @@ function havePet(pet: Pet){
 }
 
 const input = document.getElementById('input')!;
+
+interface Designer {
+  name: string;
+  [index: string]: string;
+}
+
+const designer: Designer = {
+  name: 'Quill',
+  role: 'afa',
+  fafa: 'ohoho'
+}
