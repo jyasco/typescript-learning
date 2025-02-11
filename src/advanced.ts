@@ -83,3 +83,19 @@ const designer: Designer = {
   role: 'afa',
   fafa: 'ohoho'
 }
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  }
+}
+
+const downloadedData: DownloadedData = {
+  id: 1
+}
+
+console.log(downloadedData.user?.name)
