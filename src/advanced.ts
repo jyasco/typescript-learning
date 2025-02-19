@@ -106,3 +106,18 @@ const downloadedData: DownloadedData = {
 console.log(downloadedData.user?.name)
 const userData = downloadedData.user ?? 'no-user'
 type id = DownloadedData["user"]["name"]
+
+function advancedFn(...args: readonly[number,string,boolean?,...number[]]){
+
+}
+advancedFn(0,'hi',true,3,3,3,3,3)
+
+const milk = 'milk' as const;
+const drink = 'milk'
+const array = [10,20] as const;
+const peter = {
+  name: 'Peter',
+  age: 38
+} as const;
+
+type PeterType = typeof peter
