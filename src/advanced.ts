@@ -106,3 +106,8 @@ const downloadedData: DownloadedData = {
 console.log(downloadedData.user?.name)
 const userData = downloadedData.user ?? 'no-user'
 type id = DownloadedData["user"]["name"]
+
+function advancedFn(...args: [number,string,boolean?,...number[]]){
+
+}
+advancedFn(0,'hi',true,3,3,3,3,3)
