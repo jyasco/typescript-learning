@@ -6,12 +6,17 @@ function Logging(message: string) {
 }
 
 function Component(template: string, selector: string) {
-  return function(constructor: { new(...arg: any[]): {name: string} }) {
+  return function<T extends { new(...arg: any[]): {name: string} }>(constructor: T) {
     const mountedElement = document.querySelector(selector);
     const instance = new constructor();
     if (mountedElement) {
       mountedElement.innerHTML = template;
       mountedElement.querySelector('h1')!.textContent = instance.name;
+    }
+    return class extends constructor{
+      constructor(...arg: any[]) {
+        super(...arg);
+      }
     }
   }
 }
@@ -20,7 +25,7 @@ function Component(template: string, selector: string) {
 @Logging('Logging User')
 class User {
   name = 'Quill';
-  constructor() {
+  constructor(public age: number) {
     console.log('User was created!')
   }
 }
